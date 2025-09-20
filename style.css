@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #121212, #2e2e2e);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  color: #333;
+  padding: 0 30px  30px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container.dark {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+#toggleMode {
+  background: none;
+  /* border: none; */
+  font-size: 22px;
+  cursor: pointer;
+  color: inherit;
+  text-align: right;
+}
+
+.container h1 {
+  font-size: 28px;
+  margin: -15px 0 0 0;
+}
+
+.container p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.container input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.container input:focus {
+  border-color: #4a90e2;
+}
+
+.container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #4a90e2;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.container button:hover {
+  background: #357abd;
+}
+
+#imgBox {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: 20px;
+}
+
+#imgBox.show-img {
+  max-height: 500px;
+}
+
+#imgBox img {
+  width: 200px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  border: 2px solid #4a90e2;
+  display: block;
+  margin: 10px auto;
+}
+
+#downloadBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+#downloadBtn:hover {
+  background: #1f8c39;
+}
+
+.shake {
+  animation: shake 0.4s;
+  border-color: red !important;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  #imgBox img {
+    width: 150px;
+  }
+}
